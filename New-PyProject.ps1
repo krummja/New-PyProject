@@ -46,8 +46,8 @@ Function Update-Venv()
 
 Function Initialize-Poetry() 
 {
-    Write-Host "Installing Poetry"
-    py -m pip install poetry;
+    Write-Host "Installing Poetry..."
+    py -m pip install poetry
     poetry init -n
 }
 
@@ -56,9 +56,9 @@ Function Initialize-Repository()
 {
     New-Item "README.md"
     Invoke-WebRequest $GitIgnore -UseBasicParsing -O ".gitignore"
-    git init;
-    git add -A;
-    git commit -m "first commit";
+    git init
+    git add -A
+    git commit -m "first commit"
 }
 
 
